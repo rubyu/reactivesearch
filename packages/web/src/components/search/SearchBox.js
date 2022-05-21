@@ -1022,6 +1022,8 @@ const SearchBox = (props) => {
 												onKeyDown: e =>
 													handleKeyDown(e, highlightedIndex),
 												onKeyUp: withTriggerQuery(props.onKeyUp),
+												onCompositionStart: props.onInputCompositionStart,
+												onCompositionEnd: props.onInputCompositionEnd,
 												autoFocus: props.autoFocus,
 											})}
 											themePreset={props.themePreset}
@@ -1074,6 +1076,8 @@ const SearchBox = (props) => {
 								onKeyPress={withTriggerQuery(props.onKeyPress)}
 								onKeyDown={withTriggerQuery(props.onKeyDown)}
 								onKeyUp={withTriggerQuery(props.onKeyUp)}
+								onCompositionStart={props.onInputCompositionStart}
+								onCompositionEnd={props.onInputCompositionEnd}
 								autoFocus={props.autoFocus}
 								iconPosition={props.iconPosition}
 								showIcon={props.showIcon}
@@ -1145,6 +1149,8 @@ SearchBox.propTypes = {
 	onError: types.func,
 	onBlur: types.func,
 	onFocus: types.func,
+	onInputCompositionStart: types.func,
+	props.onInputCompositionEnd: types.func,
 	onKeyDown: types.func,
 	onKeyPress: types.func,
 	onKeyUp: types.func,
