@@ -1150,7 +1150,7 @@ SearchBox.propTypes = {
 	onBlur: types.func,
 	onFocus: types.func,
 	onInputCompositionStart: types.func,
-	props.onInputCompositionEnd: types.func,
+	onInputCompositionEnd: types.func,
 	onKeyDown: types.func,
 	onKeyPress: types.func,
 	onKeyUp: types.func,
